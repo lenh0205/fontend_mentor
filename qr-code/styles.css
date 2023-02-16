@@ -4,7 +4,6 @@
 }
 
 html {
-  height: 100%;
   font-size: 0.625em;
 }
 
@@ -14,48 +13,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: inherit;
+  min-height: 100vh;
 }
 
 .qr-card {
-  width: 30rem;
-  height: 50rem;
+  max-width: 30rem;
   background-color: hsl(0, 0%, 100%);
-  padding: 10px;
+  padding: 1rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.qr-img {
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  width: 100%;
-}
-
 .qr-img img {
-  width: 100%;
+  max-width: 100%;
   object-fit: cover;
+  border-radius: 1rem;
 }
 
 .qr-content {
   display: flex;
-  padding: 10px;
+  padding: 1rem;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   flex: 1;
+  margin: 8px;
+  text-align: center;
 }
 
 .above-content {
   font-size: 20px;
   font-weight: 700;
-  text-align: center;
 }
 
 .under-content {
   font-size: 15px;
   color: #5c5858;
-  text-align: center;
 }
