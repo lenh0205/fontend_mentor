@@ -36,7 +36,6 @@ body {
 
 #card {
   display: flex;
-  border-radius: var(--radius-card);
 }
 
 .result {
@@ -79,6 +78,8 @@ body {
 .summery {
   width: var(--size-card);
   padding: 4.4rem;
+  border-top-right-radius: var(--radius-card);
+  border-bottom-right-radius: var(--radius-card);
   box-shadow: 27px 27px 10px -15px rgba(17, 17, 17, 0.05);
 }
 .summery__individual {
