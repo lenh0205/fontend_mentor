@@ -8,7 +8,7 @@ interface Summery {
 
 (async function () {
   try {
-    const result = await fetch("./data.json")
+    const result = await fetch("./src/data.json")
       .then((res) => res.json())
       .then((res) => res);
     const statistic_content = result

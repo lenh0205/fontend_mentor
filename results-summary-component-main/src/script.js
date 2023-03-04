@@ -12,7 +12,7 @@ const statistic = document.querySelector(".summery__individual");
 (function () {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const result = yield fetch("./data.json")
+            const result = yield fetch("./src/data.json")
                 .then((res) => res.json())
                 .then((res) => res);
             const statistic_content = result
