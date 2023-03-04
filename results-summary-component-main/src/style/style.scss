@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+:root {
+  --size-card: 35rem;
+  --radius-card: 1rem;
+}
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 0.625em;
+}
+body {
+  @extend %flex-center;
+  font-family: MyWebFont, sans-serif;
+  font-size: 1.4rem;
+  min-height: 100vh;
+}
+
+#card {
+  display: flex;
+  border-radius: var(--radius-card);
+}
+
+.result {
+  @extend %flex-column;
+  width: var(--size-card);
+  border-radius: var(--radius-card);
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  align-items: center;
+  padding: 3rem;
+
+  &__title {
+    font-weight: 700;
+    color: hsl(241, 100%, 89%);
+  }
+  &__box {
+    --size: 20rem;
+    width: var(--size);
+    height: var(--size);
+    background-image: linear-gradient(
+      hsla(256, 72%, 46%, 1),
+      hsla(241, 72%, 46%, 0)
+    );
+    @extend %flex-center;
+    border-radius: 50%;
+    flex-direction: column;
+    margin: 3.2rem 0;
+
+    &__number {
+      color: hsl(0, 0%, 100%);
+      font-size: 7rem;
+    }
+    &__total {
+      color: hsl(241, 100%, 89%);
+    }
+  }
+  &__type {
+    font-size: 2.9rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 1.2rem;
+  }
+  &__content {
+    text-align: center;
+    color: hsl(241, 100%, 89%);
+  }
+}
+
+.summery {
+  @extend %flex-column;
+  width: var(--size-card);
+  padding: 4.4rem;
+  box-shadow: 27px 27px 10px -15px rgb(17, 17, 17, 0.05);
+
+  &__individual {
+    @extend %flex-column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 4rem 1rem;
+  }
+  &__button {
+    outline: none;
+    border: none;
+    padding: 1.4rem 0;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 2rem;
+    font-size: 1.6rem;
+  }
+}
+
+.summery__type {
+  display: flex;
+  align-items: center;
+  padding: 1.4rem;
+  border-radius: 1rem;
+
+  &__icon {
+    display: flex;
+    margin-right: 0.5rem;
+    img {
+      object-fit: cover;
+    }
+  }
+  &__category {
+    font-size: 16px;
+    margin-right: 6.8rem;
+  }
+  &__0 {
+    background-color: rgb(255, 87, 87, 0.05);
+    &__category {
+      color: hsl(0, 100%, 67%);
+    }
+  }
+  &__1 {
+    background-color: rgb(255, 176, 31, 0.05);
+    &__category {
+      color: hsl(39, 100%, 56%);
+    }
+  }
+  &__2 {
+    background-color: rgb(0, 189, 145, 0.05);
+    &__category {
+      color: hsl(166, 100%, 37%);
+    }
+  }
+  &__3 {
+    background-color: rgb(17, 37, 212, 0.05);
+    &__category {
+      color: hsl(234, 85%, 45%);
+    }
+  }
+
+  &__score {
+    margin-right: 1rem;
+  }
+  &__total {
+    color: hsl(241, 100%, 89%);
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  #card {
+    flex-direction: column;
+  }
+  .result,
+  .summery {
+    width: 100vw;
+    &__individual {
+      padding: 4rem 0;
+    }
+    &__type {
+      margin-bottom: 1rem;
+      &__category {
+        margin-right: 11.2rem;
+      }
+    }
+  }
+}

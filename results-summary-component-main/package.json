@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "watch:css": "sass --watch src/style/style.scss src/style/style.css",
+    "watch:script": "tsc --watch"
+  },
+  "dependencies": {
+    "sass": "^1.58.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+:root {
+  --size-card: 35rem;
+  --radius-card: 1rem;
+}
+
+.result__box, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summery__individual, .summery, .result {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.625em;
+}
+
+body {
+  font-family: MyWebFont, sans-serif;
+  font-size: 1.4rem;
+  min-height: 100vh;
+}
+
+#card {
+  display: flex;
+  border-radius: var(--radius-card);
+}
+
+.result {
+  width: var(--size-card);
+  border-radius: var(--radius-card);
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  align-items: center;
+  padding: 3rem;
+}
+.result__title {
+  font-weight: 700;
+  color: hsl(241, 100%, 89%);
+}
+.result__box {
+  --size: 20rem;
+  width: var(--size);
+  height: var(--size);
+  background-image: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+  flex-direction: column;
+  margin: 3.2rem 0;
+}
+.result__box__number {
+  color: hsl(0, 0%, 100%);
+  font-size: 7rem;
+}
+.result__box__total {
+  color: hsl(241, 100%, 89%);
+}
+.result__type {
+  font-size: 2.9rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1.2rem;
+}
+.result__content {
+  text-align: center;
+  color: hsl(241, 100%, 89%);
+}
+
+.summery {
+  width: var(--size-card);
+  padding: 4.4rem;
+  box-shadow: 27px 27px 10px -15px rgba(17, 17, 17, 0.05);
+}
+.summery__individual {
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 4rem 1rem;
+}
+.summery__button {
+  outline: none;
+  border: none;
+  padding: 1.4rem 0;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 2rem;
+  font-size: 1.6rem;
+}
+
+.summery__type {
+  display: flex;
+  align-items: center;
+  padding: 1.4rem;
+  border-radius: 1rem;
+}
+.summery__type__icon {
+  display: flex;
+  margin-right: 0.5rem;
+}
+.summery__type__icon img {
+  object-fit: cover;
+}
+.summery__type__category {
+  font-size: 16px;
+  margin-right: 6.8rem;
+}
+.summery__type__0 {
+  background-color: rgba(255, 87, 87, 0.05);
+}
+.summery__type__0__category {
+  color: hsl(0, 100%, 67%);
+}
+.summery__type__1 {
+  background-color: rgba(255, 176, 31, 0.05);
+}
+.summery__type__1__category {
+  color: hsl(39, 100%, 56%);
+}
+.summery__type__2 {
+  background-color: rgba(0, 189, 145, 0.05);
+}
+.summery__type__2__category {
+  color: hsl(166, 100%, 37%);
+}
+.summery__type__3 {
+  background-color: rgba(17, 37, 212, 0.05);
+}
+.summery__type__3__category {
+  color: hsl(234, 85%, 45%);
+}
+.summery__type__score {
+  margin-right: 1rem;
+}
+.summery__type__total {
+  color: hsl(241, 100%, 89%);
+}
+
+@media only screen and (max-width: 376px) {
+  #card {
+    flex-direction: column;
+  }
+  .result,
+  .summery {
+    width: 100vw;
+  }
+  .result__individual,
+  .summery__individual {
+    padding: 4rem 0;
+  }
+  .result__type,
+  .summery__type {
+    margin-bottom: 1rem;
+  }
+  .result__type__category,
+  .summery__type__category {
+    margin-right: 11.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
