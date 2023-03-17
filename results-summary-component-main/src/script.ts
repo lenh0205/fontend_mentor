@@ -13,7 +13,7 @@ interface Summery {
       .then((res) => res);
     const statistic_content = result
       .map(
-        (summery: any, index: number) => `
+        (summery: Summery, index: number) => `
         <article class="summery__type summery__type__${index}">
             <span class="summery__type__icon">
               <img src=".${summery.icon}" class="">
