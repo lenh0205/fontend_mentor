@@ -5,11 +5,12 @@
   "description": "frontend mentor social proof",
   "main": "server.js",
   "scripts": {
-    "babel": "./node_modules/.bin/babel src --out-dir build --watch --ignore '**/index.scss'",
+    "babel": "babel src --out-dir build --watch --ignore '**/index.scss'",
     "bundle": "watchify build/index.js -o bundle.js",
     "css": "sass --watch src/index.scss index.css",
     "watch": "concurrently \"npm run babel\" \"npm run bundle\" \"npm run css\"",
-    "server": "nodemon --config nodemon.json"
+    "server": "nodemon --config nodemon.json",
+    "minify": "uglifyjs bundle.js -o bundle.min.js"
   },
   "keywords": [],
   "license": "ISC",
@@ -27,6 +28,7 @@
     "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "nodemon": "^2.0.21",
+    "uglify-js": "^3.17.4",
     "watchify": "^4.0.0"
   }
 }
